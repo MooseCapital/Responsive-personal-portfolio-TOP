@@ -1,14 +1,14 @@
 import {useContext, useEffect, useState, useRef} from 'react'
 
-function Home(props) {
+function About(props) {
 
 
 
     return (
         <>
-            <p>home page</p>
+            <div>about page</div>
         </>
     )
 }
 
-export default Home
+export default About

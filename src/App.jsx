@@ -1,7 +1,8 @@
 import {useState, useEffect, useRef, useContext} from 'react'
 import {AppContext} from "./components/AppContextProvider.jsx";
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Link, Navigate, Route, Routes} from "react-router-dom";
 import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
 
 function App(props) {
   // install react-router-dom in main.jsx with a click
@@ -9,12 +10,12 @@ function App(props) {
 
   return (
     <div className={`${props.colorMode} App`}>
-
-
+        <Link to={"/"}>home</Link>
+        <Link to={"/about"}>about</Link>
 
         <Routes>
             <Route index element={<Home/>}/>
-
+            <Route path={"/about"} element={<About/>}/>
 
             {/* catch all, so any unknown pages navigate back to the home page, or
              error page to show it doesn't exist, then auto redirect home  */}
