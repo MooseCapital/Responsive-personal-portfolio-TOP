@@ -10,8 +10,8 @@ function App(props) {
 
   return (
     <div className={`${props.colorMode} App`}>
-        <Link to={"/"}>home</Link>
-        <Link to={"/about"}>about</Link>
+        {/* <Link to={"/"}>home</Link>
+        <Link to={"/about"}>about</Link> */}
 
         <Routes>
             <Route index element={<Home/>}/>

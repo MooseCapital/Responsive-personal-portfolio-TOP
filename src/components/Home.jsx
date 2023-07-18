@@ -1,4 +1,6 @@
 import {useContext, useEffect, useState, useRef} from 'react'
+import Icon from '@mdi/react';
+import {mdiEmailOutline, mdiGithub, mdiOpenInNew, mdiPhoneOutline} from '@mdi/js';
 
 function Home(props) {
 
@@ -6,7 +8,15 @@ function Home(props) {
 
     return (
         <>
-            <p>home page</p>
+
+            <header>
+                <div>hello</div>
+                <div>hello</div>
+                <div>hello</div>
+                <div>hello</div>
+            </header>
+
+
         </>
     )
 }

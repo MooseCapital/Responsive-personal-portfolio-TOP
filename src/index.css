@@ -55,6 +55,11 @@ flex-direction: column;
 
 }
 
+header {
+background-color: aqua;
+padding: 20px 35px;
+}
+
 .App.dark-mode {
 background-color: #2e3440;
 color: rgb(236, 239, 244);
