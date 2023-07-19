@@ -81,6 +81,7 @@ background-color:#d8dee9 ;
 a {
 all: unset;
 cursor: pointer;
+width: min-content;
 }
 nav > a {
 margin: 0 0.5rem;
@@ -115,6 +116,7 @@ justify-content: center;
 width: 100%;
 border-radius: 0.3rem;
 height: auto;
+box-shadow: .3px .5px 1.4px -1px #00000037,2px 4px 11px -1px #0000006e;
 }
 .profile > h3 {
 align-self: end;
@@ -135,8 +137,10 @@ flex-direction: column;
 padding: 1rem 1rem 0.2rem 1rem;
 max-width: 300px;
 border-radius: 0 0.3rem 0.3rem 0 ;
+/* border-radius: 0.3rem; */
+box-shadow: .3px .5px 1.4px -1px #00000037,2px 4px 11px -1px #0000006e;
 }
-.about-me > h3 {
+.about-me > h1 {
 font-size: 1rem;
 margin: 0.5rem 0;
 /* margin: 1rem 1rem 0 1rem; */
@@ -146,18 +150,69 @@ font-weight: 400;
 /* margin: 1rem; */
 margin: 0.5rem 0;
 }
+
 .git-icon {
 /* margin: 0 0.2rem 0.2rem 0; */
 align-self: end;
 cursor: pointer;
 }
+.link-icon
+{
+    align-self: end;
+}
+.link-icon-p-1 {
+margin-left: auto;
+display: flex;
+}
 
-
-
-
-
-
-
+.link-icon-p {
+display: flex;
+/* margin-left: auto; */
+}
+.light-mode .project {
+background-color: #eceff4;
+}
+.dark-mode .project {
+background-color: #4c566a;
+}
+.project {
+max-width: 350px;
+border-radius: 0.3rem;
+background-color: salmon;
+display: flex;
+flex-direction: column;
+box-shadow: .3px .5px 1.4px -1px #00000037,2px 4px 11px -1px #0000006e;
+}
+.project-top {
+background-color: #88c0d0;
+display: flex;
+padding: 0.5rem;
+align-items: center;
+}
+.project-title {
+font-size: 1rem;
+}
+.project-icon {
+margin-left: auto;
+cursor: pointer;
+}
+.project-icon-2 {
+cursor: pointer;
+}
+.project-img {
+width: 100%;
+height: auto;
+border-radius: 0.3rem 0.3rem 0 0;
+}
+.project-description {
+padding: 0.5rem;
+font-weight: 400;
+}
+/*when going in column mode, make sure to adjust width of about me and border radius
+  */
+.projects {
+display: flex;
+}
 
 
 
