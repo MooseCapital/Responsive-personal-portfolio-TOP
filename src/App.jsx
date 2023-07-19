@@ -8,13 +8,15 @@ function App(props) {
   // install react-router-dom in main.jsx with a click
   //set light-mode or dark-mode in main.jsx
 
+  const [screenMode, setScreenMode] = useState('light-mode');
+
   return (
-    <div className={`${props.colorMode} App`}>
+    <div className={`${screenMode} App`}>
         {/* <Link to={"/"}>home</Link>
         <Link to={"/about"}>about</Link> */}
 
         <Routes>
-            <Route index element={<Home/>}/>
+            <Route index element={<Home item={{screenMode, setScreenMode}} />}/>
             <Route path={"/about"} element={<About/>}/>
 
             {/* catch all, so any unknown pages navigate back to the home page, or

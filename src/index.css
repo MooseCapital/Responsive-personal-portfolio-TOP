@@ -55,10 +55,6 @@ flex-direction: column;
 
 }
 
-header {
-background-color: aqua;
-padding: 20px 35px;
-}
 
 .App.dark-mode {
 background-color: #2e3440;
@@ -69,6 +65,101 @@ color: rgb(236, 239, 244);
 color: #2e3440;
 background-color: aliceblue;
 }
+
+
+nav {
+padding: 1.1rem 2rem;
+display: flex;
+align-items: center;
+}
+.dark-mode nav {
+background-color: #3b4252;
+}
+.light-mode nav {
+background-color:#d8dee9 ;
+}
+a {
+all: unset;
+cursor: pointer;
+}
+nav > a {
+margin: 0 0.5rem;
+}
+nav > .icon {
+margin-left: auto;
+}
+.icon {
+cursor: pointer;
+}
+/* .light-mode header { */
+/* background-color: #eceff4; */
+/* } */
+/* .dark-mode header { */
+/* background-color: #4c566a; */
+/* } */
+header {
+background-color: #88c0d0;
+padding: 2rem 2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.profile {
+/* background-color: red; */
+max-width: 250px;
+display: flex;
+justify-content: center;
+}
+.profile > img {
+width: 100%;
+border-radius: 0.3rem;
+height: auto;
+}
+.profile > h3 {
+align-self: end;
+font-size: 1.5rem;
+position: absolute;
+margin-top: 0.7rem;
+color: #2e3440;
+}
+.light-mode .about-me {
+background-color: #eceff4;
+}
+.dark-mode .about-me {
+background-color: #4c566a;
+}
+.about-me {
+display: flex;
+flex-direction: column;
+padding: 1rem 1rem 0.2rem 1rem;
+max-width: 300px;
+border-radius: 0 0.3rem 0.3rem 0 ;
+}
+.about-me > h3 {
+font-size: 1rem;
+margin: 0.5rem 0;
+/* margin: 1rem 1rem 0 1rem; */
+}
+.about-me > p {
+font-weight: 400;
+/* margin: 1rem; */
+margin: 0.5rem 0;
+}
+.git-icon {
+/* margin: 0 0.2rem 0.2rem 0; */
+align-self: end;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 
 
 

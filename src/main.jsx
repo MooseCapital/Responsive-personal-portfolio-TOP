@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <AppContextProvider>
     <HashRouter >
-        <App colorMode={"light-mode"} />
+        <App />
     </HashRouter>
   </AppContextProvider>
   </React.StrictMode>,
