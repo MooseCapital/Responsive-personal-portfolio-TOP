@@ -11,6 +11,7 @@ import {
 
 const moose = new URL('/public/images/48196495.png', import.meta.url).href;
 const taxCalc = new URL('/public/images/tax-calculator-site.png', import.meta.url).href;
+const mooseLandscape = new URL('/public/images/moose-mountain.jpg', import.meta.url).href;
 
 function Home(props) {
 
@@ -23,10 +24,10 @@ function Home(props) {
                 <a href="">projects</a>
                 <a href="">contact</a>
                 {props.item.screenMode === 'light-mode' ?
-                    <Icon className={"icon"} path={mdiWeatherNight} size={'1.5rem'}
+                    <Icon className={"icon"} path={mdiWeatherNight} size={'2rem'}
                 onClick={() => props.item.setScreenMode('dark-mode')}
                  /> :
-                <Icon className={"icon"} path={mdiWhiteBalanceSunny} size={'1.5rem'} color={'#ebcb8b'}
+                <Icon className={"icon"} path={mdiWhiteBalanceSunny} size={'2rem'} color={'#ebcb8b'}
                     onClick={() => props.item.setScreenMode('light-mode')}
                 />
                 }
@@ -48,6 +49,7 @@ function Home(props) {
 
             </header>
             <main className={'projects'}>
+                <h1>Projects</h1>
                 <section className="project">
                     <img className={'project-img'} src={taxCalc} alt=""/>
                     <div className="project-top">
@@ -141,7 +143,22 @@ function Home(props) {
 
 
             </main>
+            <footer>
+                <section className="contact-side">
+                <div className="contact-row">
+                    <Icon path={mdiPhoneOutline} size={1} />
+                    <p>(505)-111-1111</p>
+                </div>
+                <div className="contact-row">
+                    <Icon path={mdiEmailOutline} size={1} />
+                    <p>MooseCapital@gmail.com</p>
+                </div>
 
+                </section>
+                 <img src={mooseLandscape} alt="moose with mountain scenery"/>
+            </footer>
+            {/* <svg className={'wave-svg'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={'.wave-path'} fill={props.item.screenMode === 'light-mode' ? 'wheat' : '#4c566a'} fillOpacity="1" d="M0,256L30,245.3C60,235,120,213,180,218.7C240,224,300,256,360,245.3C420,235,480,181,540,133.3C600,85,660,43,720,64C780,85,840,171,900,181.3C960,192,1020,128,1080,128C1140,128,1200,192,1260,224C1320,256,1380,256,1410,256L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg> */}
+            {/* <svg className={'wave-svg'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill={props.item.screenMode === 'light-mode' ? 'wheat' : '#4c566a'}  fill-opacity="1" d="M0,160L80,154.7C160,149,320,139,480,149.3C640,160,800,192,960,213.3C1120,235,1280,245,1360,250.7L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> */}
         </>
     )
 }
