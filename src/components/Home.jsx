@@ -1,9 +1,8 @@
-import {useContext, useEffect, useState, useRef} from 'react'
+// import {useContext, useEffect, useState, useRef} from 'react'
 import Icon from '@mdi/react';
 import {
     mdiEmailOutline,
-    mdiGithub, mdiLinkBoxVariant, mdiLinkVariant,
-    mdiOpenInNew,
+    mdiGithub, mdiLinkVariant,
     mdiPhoneOutline,
     mdiWeatherNight,
     mdiWhiteBalanceSunny
@@ -11,7 +10,14 @@ import {
 
 const moose = new URL('/public/images/48196495.png', import.meta.url).href;
 const taxCalc = new URL('/public/images/tax-calculator-site.png', import.meta.url).href;
+const charitableTaxCalc = new URL('/public/images/charitable-trust-image.png', import.meta.url).href;
 const mooseLandscape = new URL('/public/images/moose-mountain.jpg', import.meta.url).href;
+const outrunImage = new URL('/public/images/music-outrun.png', import.meta.url).href;
+const picStoreImage = new URL('/public/images/pic-store.png', import.meta.url).href;
+const weatherImage = new URL('/public/weather-app.png', import.meta.url).href;
+const battleshipImage = new URL('/public/battleship.png', import.meta.url).href;
+
+
 
 function Home(props) {
 
@@ -51,18 +57,78 @@ function Home(props) {
             <main className={'projects'}>
                 <h1>Projects</h1>
                 <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
+                    <img className={'project-img'} src={outrunImage} alt=""/>
                     <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
-                        <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
+                        <h2 className="project-title">Outrun music radio</h2>
+                        <a href="https://moosecapital.github.io/Outrun-NightDrive/" className="link-icon-p-1">
                             <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
                         </a>
-                        <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
+                        <a href="https://github.com/MooseCapital/Outrun-NightDrive" className="link-icon-p">
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
                         </a>
                     </div>
                     <p className="project-description">
-                        For calculating all short and long capital gains, with local storage
+                        For Listening to my favorite Outrun music and setting a nice background
+                    </p>
+                </section>
+                <section className="project">
+                    <img className={'project-img'} src={charitableTaxCalc} alt=""/>
+                    <div className="project-top">
+                        <h2 className="project-title">Charitable Remainder Trust Calculator</h2>
+                        <a href="https://moosecapital.github.io/-Charitable-Remainder-Trust-Calculator-/" className="link-icon-p-1">
+                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
+                        </a>
+                        <a href="https://github.com/MooseCapital/-Charitable-Remainder-Trust-Calculator-" className="link-icon-p">
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
+                        </a>
+                    </div>
+                    <p className="project-description">
+                        Calculate Charitable remainder trust payouts compared to selling your asset and being taxed.
+                    </p>
+                </section>
+                <section className="project">
+                    <img className={'project-img'} src={picStoreImage} alt=""/>
+                    <div className="project-top">
+                        <h2 className="project-title">Pic store</h2>
+                        <a href="https://moosecapital.github.io/Pic-some-react-project/" className="link-icon-p-1">
+                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
+                        </a>
+                        <a href="https://github.com/MooseCapital/Pic-some-react-project" className="link-icon-p">
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
+                        </a>
+                    </div>
+                    <p className="project-description">
+                        Simulate a shopping cart and checkout, with a nice layout image gallery
+                    </p>
+                </section>
+                <section className="project">
+                    <img className={'project-img'} src={battleshipImage} alt=""/>
+                    <div className="project-top">
+                        <h2 className="project-title">Battleship Game</h2>
+                        <a href="https://moosecapital.github.io/Battleship/" className="link-icon-p-1">
+                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
+                        </a>
+                        <a href="https://github.com/MooseCapital/Battleship" className="link-icon-p">
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
+                        </a>
+                    </div>
+                    <p className="project-description">
+                        Play a classic game of battleship against the computer
+                    </p>
+                </section>
+                <section className="project">
+                    <img className={'project-img'} src={weatherImage} alt=""/>
+                    <div className="project-top">
+                        <h2 className="project-title">Weather App</h2>
+                        <a href="https://moosecapital.github.io/Weather-App/" className="link-icon-p-1">
+                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
+                        </a>
+                        <a href="https://github.com/MooseCapital/Weather-App" className="link-icon-p">
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
+                        </a>
+                    </div>
+                    <p className="project-description">
+                        Get your local weather with a nice scenic background
                     </p>
                 </section>
                 <section className="project">
@@ -73,67 +139,7 @@ function Home(props) {
                             <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
                         </a>
                         <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
-                        </a>
-                    </div>
-                    <p className="project-description">
-                        For calculating all short and long capital gains, with local storage
-                    </p>
-                </section>
-                <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
-                    <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
-                        <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
-                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
-                        </a>
-                        <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
-                        </a>
-                    </div>
-                    <p className="project-description">
-                        For calculating all short and long capital gains, with local storage
-                    </p>
-                </section>
-                <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
-                    <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
-                        <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
-                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
-                        </a>
-                        <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
-                        </a>
-                    </div>
-                    <p className="project-description">
-                        For calculating all short and long capital gains, with local storage
-                    </p>
-                </section>
-                <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
-                    <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
-                        <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
-                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
-                        </a>
-                        <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
-                        </a>
-                    </div>
-                    <p className="project-description">
-                        For calculating all short and long capital gains, with local storage
-                    </p>
-                </section>
-                <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
-                    <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
-                        <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
-                            <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
-                        </a>
-                        <a href="https://github.com/MooseCapital/Capital-gains-tax-calculator" className="link-icon-p">
-                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to Github'}/>
+                            <Icon  className={"project-icon-2"} path={mdiGithub} size={1} title={'link to GitHub'}/>
                         </a>
                     </div>
                     <p className="project-description">
