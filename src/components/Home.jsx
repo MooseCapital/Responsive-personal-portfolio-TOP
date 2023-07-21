@@ -9,13 +9,13 @@ import {
 } from '@mdi/js';
 
 const moose = new URL('/public/images/48196495.png', import.meta.url).href;
-const taxCalc = new URL('/public/images/tax-calculator-site.png', import.meta.url).href;
 const charitableTaxCalc = new URL('/public/images/charitable-trust-image.png', import.meta.url).href;
 const mooseLandscape = new URL('/public/images/moose-mountain.jpg', import.meta.url).href;
 const outrunImage = new URL('/public/images/music-outrun.png', import.meta.url).href;
 const picStoreImage = new URL('/public/images/pic-store.png', import.meta.url).href;
-const weatherImage = new URL('/public/weather-app.png', import.meta.url).href;
-const battleshipImage = new URL('/public/battleship.png', import.meta.url).href;
+const weatherImage = new URL('/public/images/weather-app.png', import.meta.url).href;
+const battleshipImage = new URL('/public/images/battleship.png', import.meta.url).href;
+const taxCalcImage = new URL('/public/images/tax-calc.png', import.meta.url).href
 
 
 
@@ -132,9 +132,9 @@ function Home(props) {
                     </p>
                 </section>
                 <section className="project">
-                    <img className={'project-img'} src={taxCalc} alt=""/>
+                    <img className={'project-img'} src={taxCalcImage} alt=""/>
                     <div className="project-top">
-                        <h2 className="project-title">Capital Gains Tax</h2>
+                        <h2 className="project-title">Capital Gains Tax Calculator</h2>
                         <a href="https://moosecapital.github.io/Capital-gains-tax-calculator/" className="link-icon-p-1">
                             <Icon  className={"project-icon"} path={mdiLinkVariant} size={1} title={'link to website'} />
                         </a>
