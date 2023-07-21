@@ -7,7 +7,6 @@ import {
     mdiWeatherNight,
     mdiWhiteBalanceSunny
 } from '@mdi/js';
-
 const moose = new URL('/public/images/48196495.png', import.meta.url).href;
 const charitableTaxCalc = new URL('/public/images/charitable-trust-image.png', import.meta.url).href;
 const mooseLandscape = new URL('/public/images/moose-mountain.jpg', import.meta.url).href;
@@ -26,9 +25,7 @@ function Home(props) {
     return (
         <>
             <nav>
-                <a href="">about</a>
-                <a href="">projects</a>
-                <a href="">contact</a>
+                <h2>MooseCapital's Responsive Portfolio</h2>
                 {props.item.screenMode === 'light-mode' ?
                     <Icon className={"icon"} path={mdiWeatherNight} size={'2rem'}
                 onClick={() => props.item.setScreenMode('dark-mode')}
